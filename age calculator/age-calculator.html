@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Age Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f0f0f0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    input, button {
+      margin: 5px 0;
+      padding: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 8px 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #result {
+      margin-top: 20px;
+      background: white;
+      padding: 15px;
+      border: 1px solid #ccc;
+      display: none;
+      width: 300px;
+    }
+
+    #error {
+      color: red;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Age Calculator</h1>
+
+  <label for="dob">Enter your Date of Birth:</label><br>
+  <input type="date" id="dob"><br>
+  <button onclick="calculateAge()">Calculate</button>
+
+  <p id="error"></p>
+
+  <div id="result">
+    <h3>Your Age:</h3>
+    <p>Years: <b id="years"></b></p>
+    <p>Months: <b id="months"></b></p>
+    <p>Days: <b id="days"></b></p>
+  </div>
+
+  
+<script src="index.js"></script>
+</body>
+</html>

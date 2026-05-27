@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>// PASSWD_GEN</h1>
+    <p>secure password generator &amp; vault</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Generator Panel -->
+    <div class="panel">
+      <div class="panel-title">// Generate</div>
+
+      <!-- Password Output -->
+      <div class="pw-display">
+        <span id="password-output" class="placeholder">click generate...</span>
+        <button class="icon-btn" id="copy-btn" title="Copy password">&#x2398;</button>
+        <button class="icon-btn" id="refresh-btn" title="Regenerate">&#x21BA;</button>
+      </div>
+
+      <!-- Strength Bar -->
+      <div class="strength-bar-wrap">
+        <span class="strength-label" id="strength-label" style="color:var(--muted)">—</span>
+        <div class="strength-track">
+          <div class="strength-fill" id="strength-fill"></div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- Length -->
+      <div class="field-label">Password Length</div>
+      <div class="slider-row">
+        <input type="range" id="length-slider" min="4" max="50" value="12">
+        <span id="length-display">12</span>
+        <input type="number" class="num-input" id="length-input" min="4" max="50" value="12">
+      </div>
+
+      <!-- Character Type Options -->
+      <div class="field-label">Character Types</div>
+      <div class="grid2">
+        <label class="opt"><input type="checkbox" id="opt-upper" checked> Uppercase (A-Z)</label>
+        <label class="opt"><input type="checkbox" id="opt-lower" checked> Lowercase (a-z)</label>
+        <label class="opt"><input type="checkbox" id="opt-num" checked> Numbers (0-9)</label>
+        <label class="opt"><input type="checkbox" id="opt-sym"> Symbols (!@#...)</label>
+      </div>
+
+      <!-- Character Tags -->
+      <div class="char-info">
+        <span class="char-tag" id="tag-upper">ABC</span>
+        <span class="char-tag" id="tag-lower">abc</span>
+        <span class="char-tag" id="tag-num">123</span>
+        <span class="char-tag" id="tag-sym">!@#</span>
+      </div>
+
+      <div class="error-msg" id="gen-error"></div>
+
+      <button class="btn btn-primary" id="generate-btn">GENERATE PASSWORD</button>
+
+      <div class="divider"></div>
+
+      <!-- Save to Vault -->
+      <div class="field-label" style="margin-bottom:0.4rem">Label / Category (optional)</div>
+      <input type="text" class="text-input" id="label-input" placeholder="e.g. Gmail, Work, Banking...">
+      <div class="error-msg" id="save-error"></div>
+      <button class="btn btn-secondary" id="save-btn">SAVE TO VAULT</button>
+    </div>
+
+    <!-- Vault Panel -->
+    <div class="panel">
+      <div class="panel-title">
+        // Vault
+        <span class="count-badge" id="count-badge">0</span>
+      </div>
+
+      <div class="search-row">
+        <input type="text" class="text-input" id="search-input" placeholder="&#x1F50D; Search passwords...">
+        <button class="icon-btn" id="clear-search-btn" title="Clear search">&#x2715;</button>
+      </div>
+
+      <div class="saved-list" id="saved-list">
+        <div class="empty-state">No passwords saved yet</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

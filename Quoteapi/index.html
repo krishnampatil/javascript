@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random Quote Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Random Quote Generator</h1>
+
+  <div class="card">
+    <p id="loading">Loading quote...</p>
+    <p class="quote" id="quoteText" style="display:none;"></p>
+    <p class="author" id="quoteAuthor" style="display:none;"></p>
+
+    <div class="buttons">
+      <button id="newQuoteBtn">New Quote</button>
+      <button id="copyBtn">Copy</button>
+      <button id="saveBtn">Save</button>
+    </div>
+
+    <p class="toast" id="toast"></p>
+  </div>
+
+  <div class="favorites">
+    <div class="fav-header">
+      <h2>Saved Quotes</h2>
+      <button id="clearBtn">Clear All</button>
+    </div>
+    <ul id="favoritesList">
+      <li class="empty">No saved quotes yet.</li>
+    </ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

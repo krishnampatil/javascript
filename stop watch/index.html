@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stopwatch-container">
+        <!-- Dynamic Time Display -->
+        <div class="display" id="display">00:00:00.00</div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="startBtn" onclick="startTimer()">Start</button>
+            <button id="pauseBtn" onclick="pauseTimer()" disabled>Pause</button>
+            <button id="resumeBtn" onclick="resumeTimer()" style="display: none;">Resume</button>
+            <button id="lapBtn" onclick="recordLap()" disabled>Lap</button>
+            <button id="resetBtn" onclick="resetTimer()">Reset</button>
+        </div>
+
+        <!-- Laps Record Section -->
+        <div class="laps-section">
+            <h3>Recorded Laps</h3>
+            <ul id="lapsList"></ul>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
